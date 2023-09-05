@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+<script>
+
+   function hasan()
+   {
+    var a = document.getElementsByClassName("pic");
+    for (i of a){
+    i.src = "images/pexels-kasuma-1785502.jpg";
+  }
+   
+   }
+
+   function hasana()
+   {
+    var a = document.getElementsByClassName("pic");
+    for (i of a){
+    i.src = "images/pexels-photo-1058633.jpeg";
+  }
+   }
+
+   function hasanb(){
+    var a = document.getElementsByClassName("pic");
+    for (i of a ){
+      i.src = "images/pexels-photo-4220967.jpeg";
+    }
+   }
+
+  function hasanc(){
+  var a = document.getElementsByClassName("pic");
+  for (i of a ){
+    i.src = "images/pexels-photo-831056.jpeg";
+  }
+
+}
+  
+</script>
+ 
+</head>
+<body>
+    <div id="box"> 
+        <img src="images/matterhorn-alpine-zermatt-mountains-188973.jpeg" alt="hasan" width="540px" height="295px" class="pic" id="pic">
+    </div>
+
+   <div class="smallbox" >
+
+   <div class="smallboxa" id="img1" ><img src="images/pexels-kasuma-1785502.jpg" width="105px" height="124px" onclick="hasan()"></div>
+
+   <div class="smallboxb">
+    <img src="images/pexels-photo-1058633.jpeg" width="105px" height="124px" onclick="hasana()"></div>
+
+   <div class="smallboxc"><img src="images/pexels-photo-4220967.jpeg" width="105px" height="124px" onclick="hasanb()"></div>
+
+   <div class="smallboxd"><img src="images/pexels-photo-831056.jpeg" width="105px" height="124px" onclick="hasanc()"></div>
+
+   <input type="range" id="bright" min="0" max="200" onclick="bright()">
+   <input type="range" id="contras" min="0" max="400" onclick="contras()">
+   <input type="range" id="saturate" min="0" max="500" onclick="saturate()">
+
+   </div>
+   
+<script>
+      function bright()
+      {
+        var x = document.getElementById("bright").value;
+        var pic = document.getElementById("pic");
+        pic.style.filter = "brightness("+x+"%)";
+      }
+
+      function contras()
+      {
+        var y = document.getElementById("contras").value;
+        var pic = document.getElementById("pic");
+        pic.style.filter = "contrast("+y+"%)";
+      }
+
+      function saturate()
+      {
+        var z = document.getElementById("saturate").value;
+        var pic = document.getElementById("pic");
+        pic.style.filter = "saturate("+z+"%)";
+      }
+</script>
+
+</body>
+</html>
